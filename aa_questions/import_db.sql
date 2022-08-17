@@ -37,6 +37,7 @@ CREATE TABLE replies (
     body TEXT,
     author_id INTEGER,
 
+
     FOREIGN KEY (author_id) REFERENCES users(id)
 );
 
@@ -47,3 +48,15 @@ CREATE TABLE question_likes (
 
     FOREIGN KEY (question_id) REFERENCES questions(id)
 );
+
+INSERT INTO
+    users(id, fname, lname)
+
+VALUES
+    (1,'John', 'Smith'),
+    (2, 'Jane', 'Doe'),
+    (3, 'John', 'Travolta'),
+    (4, 'Shaq', 'O''Neil'),
+    (5, 'Kobe', 'Bryant');
+
+
